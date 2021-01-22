@@ -39,5 +39,4 @@ jobs:
 
       - name: Deploy to netlify
         run: |
-          cd vbi-ui
           npx netlify deploy --site 604630cd-e1a2-4fbc-8167-ba35f27991c8 --dir build --auth ${{secrets.NETLIFY_AUTH_TOKEN}} --prod
