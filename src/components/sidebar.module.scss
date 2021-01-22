@@ -1,0 +1,16 @@
+.section {
+  grid-area: sidebar;
+  display: flex;
+  background: #373b53;
+  flex-direction: column;
+  align-content: center;
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 80px);
+}
+
+.logo {
+  object-fit: contain;
+  background: #6f52ed;
+  padding-bottom: 10px;
+}

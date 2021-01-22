@@ -1,22 +1,19 @@
-import "./assets/styles/index.scss";
 import "./app.module.scss";
+import "./assets/styles/index.scss";
+import NavigationBar from "./components/navigationBar";
+import Sidebar from "./components/sidebar";
+import Logo from "./components/Logo";
+import Main from "./components/main";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavigationBar></NavigationBar>
+      <Logo></Logo>
+      <Sidebar></Sidebar>
+      <main>
+        <Main></Main>
+      </main>
+    </>
   );
 }
 
