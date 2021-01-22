@@ -1,0 +1,43 @@
+name: deploy_frontend
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Deploy to https://online-course-catalog.netlify.app/
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+
+      - name: install dependencies
+        run: |
+          yarn --frozen-lockfile
+
+      - name: run tests
+        run: |
+          yarn test
+
+      - name: Build
+        run: |
+          echo "REACT_APP_DASHBOARD_API_URL=http://my-json-server.typicode.com/shripad-agashe/fake-api/dashboard" > .env
+          echo "REACT_APP_STUDENTS_API_URL=http://my-json-server.typicode.com/shripad-agashe/fake-api/students" >> .env
+          yarn build
+          cp netlify.toml ./build
+
+      - name: Install netlify-cli
+        run: |
+          npm install netlify-cli
+
+      - name: Deploy to netlify
+        run: |
+          cd vbi-ui
+          npx netlify deploy --site 604630cd-e1a2-4fbc-8167-ba35f27991c8 --dir build --auth ${{secrets.NETLIFY_AUTH_TOKEN}} --prod
