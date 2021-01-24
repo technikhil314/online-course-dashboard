@@ -24,12 +24,12 @@ jobs:
 
       - name: run tests
         run: |
+          echo "REACT_APP_DASHBOARD_API_URL=https://my-json-server.typicode.com/shripad-agashe/fake-api/dashboard" > .env
+          echo "REACT_APP_STUDENTS_API_URL=https://my-json-server.typicode.com/shripad-agashe/fake-api/students" >> .env
           yarn test
 
       - name: Build
         run: |
-          echo "REACT_APP_DASHBOARD_API_URL=https://my-json-server.typicode.com/shripad-agashe/fake-api/dashboard" > .env
-          echo "REACT_APP_STUDENTS_API_URL=https://my-json-server.typicode.com/shripad-agashe/fake-api/students" >> .env
           yarn build
           cp netlify.toml ./build
 
