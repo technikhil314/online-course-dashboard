@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot should match 1`] = `
+<div>
+  <nav
+    class="section"
+  >
+    <ul
+      class="end"
+    >
+      <li
+        class="item"
+      >
+        <span
+          class="mr-4"
+        >
+          <p
+            class="m-0"
+            data-testid="username"
+          >
+            Cody simmons
+          </p>
+          <small
+            class="muted"
+            data-testid="userDesignation"
+          >
+            Lecturer
+          </small>
+        </span>
+        <img
+          alt=""
+          class="avatar"
+          data-testid="userImage"
+          src="avatar.png"
+        />
+      </li>
+    </ul>
+  </nav>
+  <section
+    class="section"
+  >
+    <img
+      alt=""
+      class="logo"
+      src="logo.png"
+    />
+  </section>
+  <aside
+    class="section"
+  />
+  <main>
+    <main
+      class="section"
+    >
+      <header>
+        <h2
+          class="title mb-2"
+        >
+          Dashboard
+        </h2>
+        <h5
+          class="subtitle mt-0 muted"
+        >
+          Mobile UX/UI Design course
+        </h5>
+      </header>
+      <section
+        class="section"
+      />
+      <section
+        class="section"
+      >
+        <article
+          class="box undefined"
+        >
+          <header
+            class="header"
+          >
+            <h4>
+              Students by average mark
+            </h4>
+            <div
+              class="dropdown "
+              data-testid="dropdown"
+            >
+              <button
+                class="dropdownControl"
+                data-testid="dropdownButton"
+              >
+                Descending
+              </button>
+              <ul
+                data-testid="dropdownFlyout"
+              >
+                <li
+                  data-testid="optiondesc"
+                >
+                  <button>
+                    Descending
+                  </button>
+                </li>
+                <li
+                  data-testid="optionasc"
+                >
+                  <button>
+                    Ascending
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </header>
+          <div
+            class="marksContainer"
+          />
+        </article>
+      </section>
+    </main>
+  </main>
+</div>
+`;

@@ -7,10 +7,10 @@ const NavigationBar = (params) => {
       <ul className={styles.end}>
         <li className={styles.item}>
           <span className="mr-4">
-            <p className="m-0">Cody simmons</p>
-            <small className="muted">Lecturer</small>
+            <p className="m-0" data-testid="username">Cody simmons</p> 
+            <small className="muted" data-testid="userDesignation">Lecturer</small>
           </span>
-          <img src={avatar} alt="" className={styles.avatar} />
+          <img src={avatar} alt="" className={styles.avatar} data-testid="userImage"/>
         </li>
       </ul>
     </nav>

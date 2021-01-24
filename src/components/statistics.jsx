@@ -14,7 +14,7 @@ function Statistics(params) {
     <section className={styles.section}>
       {data.map(({ id, title, type, line1, line2 }) => (
         <Box key={id}>
-          <div className={styles.stats}>
+          <div className={styles.stats} data-testid={`stats${id}`}>
             <img
               className={`mr-4 ${styles.statsLogo}`}
               src={type === "profiles" ? person : mark}
@@ -25,7 +25,9 @@ function Statistics(params) {
                 {line1 && <span>{line1}</span>}
                 {line2 && <span className="muted fs-095"> {line2}</span>}
               </h3>
-              <small className="muted mt-0">{title}</small>
+              <small className="muted mt-0" data-testid={`stats${id}Title`}>
+                {title}
+              </small>
             </div>
           </div>
         </Box>

@@ -10,16 +10,24 @@ const Dropdown = ({ options, onChange, defaultValue }) => {
     onChange({ name, value });
   };
   return (
-    <div className={`${styles.dropdown} ${active ? styles.active : ""}`}>
+    <div
+      className={`${styles.dropdown} ${active ? styles.active : ""}`}
+      data-testid="dropdown"
+    >
       <button
         className={styles.dropdownControl}
         onClick={() => setActive(!active)}
+        data-testid="dropdownButton"
       >
         {selectedValue}
       </button>
-      <ul>
+      <ul data-testid="dropdownFlyout">
         {options.map((option) => (
-          <li key={option.value} onClick={() => onOptionChange(option)}>
+          <li
+            key={option.value}
+            onClick={() => onOptionChange(option)}
+            data-testid={`option${option.value}`}
+          >
             <button>{option.name}</button>
           </li>
         ))}
