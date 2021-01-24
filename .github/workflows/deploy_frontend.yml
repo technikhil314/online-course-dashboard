@@ -22,9 +22,9 @@ jobs:
         run: |
           yarn --frozen-lockfile
 
-      # - name: run tests
-      #   run: |
-      #     yarn test
+      - name: run tests
+        run: |
+          yarn test
 
       - name: Build
         run: |
